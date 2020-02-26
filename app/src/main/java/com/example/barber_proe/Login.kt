@@ -120,17 +120,10 @@ class Login : AppCompatActivity() {
 
     }
 
-
     override fun onBackPressed() {
         setResult(Activity.RESULT_CANCELED)
         finish()
         super.onBackPressed()
     }
-
-
-
-
-
-
 
 }
