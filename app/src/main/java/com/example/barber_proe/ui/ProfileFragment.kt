@@ -13,6 +13,7 @@ import android.view.MenuItem
 import com.example.barber_proe.R
 
 import android.view.Menu
+import com.example.barber_proe.MainActivity
 
 /**
  * A simple [Fragment] subclass.
@@ -28,6 +29,8 @@ class ProfileFragment : Fragment() {
 
         return inflater.inflate(R.layout.fragment_profile, container, false)
     }
+
+
 
 
 

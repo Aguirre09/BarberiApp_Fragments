@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.fragment.app.Fragment
 import com.example.barber_proe.ui.InicioFragment
@@ -26,34 +27,32 @@ class MainActivity : AppCompatActivity() {
             when {
                 menuItem.itemId == R.id.navigationExplore -> {
                     loadFragment(InicioFragment())
+                    Toast.makeText(this, "Inicio", Toast.LENGTH_SHORT).show()
                     return@setOnNavigationItemSelectedListener true
                 }
-
                 menuItem.itemId == R.id.navigationDashboard -> {
                     loadFragment(ProcesoFragment())
+                    Toast.makeText(this, "Página de inicio", Toast.LENGTH_SHORT).show()
                     return@setOnNavigationItemSelectedListener true
                 }
-
 
                 menuItem.itemId == R.id.navigationAccount -> {
                     loadFragment(ProfileFragment())
+                    Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
                     return@setOnNavigationItemSelectedListener true
                 }
 
                 menuItem.itemId == R.id.navigationStore -> {
                     loadFragment(StoreFragment())
+                    Toast.makeText(this, "Tienda", Toast.LENGTH_SHORT).show()
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> {
                     return@setOnNavigationItemSelectedListener false
                 }
             }
-
-
         }
-
     }
-
     private fun loadFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().also { fragmentTransaction ->
            fragmentTransaction.replace(R.id.fragmentContainer,fragment)
@@ -61,7 +60,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
     override fun onBackPressed() {
         setResult(Activity.RESULT_CANCELED)
         finish()
