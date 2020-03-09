@@ -105,6 +105,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.995" />
 
+        <Button
+            android:id="@+id/Exit"
+            android:layout_width="41dp"
+            android:layout_height="29dp"
+            android:background="#FFFFFF"
+            android:drawableBottom="@android:drawable/ic_lock_power_off"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.027" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
